@@ -12,10 +12,14 @@
   <body>
     <a-scene
       vr-mode-ui='enabled: false'>
+      <a-assets>
+        <a-asset-item id="arrow" src="./direction_arrow.glb"></a-asset-item>
+        <a-asset-item id="logo" src="./logo.jpg"></a-asset-item>
+      </a-assets>
       <a-camera gps-camera="minDistance: 40;" rotation-reader></a-camera>
-      <a-entity gltf-model ="./direction_arrow.glb" scale = "0.5 0.5 0.5" 
+      <a-gltf-model src="#arrow" scale = "0.5 0.5 0.5" 
             position =" 0 0 -4" rotation = "180 270 180"></a-entity>
-      <a-image src="./logo.png"></a-image>
+      <a-image src="#logo" width="3" height="1.5" position =" 1 1 -4"></a-image>
     </a-scene>
   </body>
 </html>
